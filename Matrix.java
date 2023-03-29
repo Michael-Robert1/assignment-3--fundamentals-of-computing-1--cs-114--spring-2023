@@ -3,19 +3,15 @@
 //
 //
 //------------------------------------------------------------------------------
-
 public class Matrix {
-  private final int VAR;
-
-  private int var;
-
+  public int[] array;
+  private int matrixDimension;
   //----------------------------------------------------------------------------
   //  Constructor: Sets the initial ...
   //----------------------------------------------------------------------------
   public Matrix()
   {
-    var = 0;
-    VAR = 0;
+
   }
 
   //----------------------------------------------------------------------------
@@ -23,7 +19,9 @@ public class Matrix {
   //----------------------------------------------------------------------------
   public void initiateMatrix(int value)
   {
-    var = var + VAR;
+    matrixDimension = value;
+    int arraySize = matrixDimension * matrixDimension;
+    array = new int[arraySize];
   }
 
   //----------------------------------------------------------------------------
@@ -31,7 +29,9 @@ public class Matrix {
   //----------------------------------------------------------------------------
   public void populateMatrix()
   {
-
+    for(int i = 0; i < array.length; i++){
+      array[i] = i + 1;
+    }
   }
 
   //----------------------------------------------------------------------------
@@ -39,7 +39,12 @@ public class Matrix {
   //----------------------------------------------------------------------------
   public void printMatrix()
   {
-    var = 0;
+    for(int i = 0; i < array.length; i++){
+      if ((i+1)%matrixDimension == 0){
+        System.out.println(array[i]);
+      }
+      System.out.print(array[i]);
+    }
   }
 
   //----------------------------------------------------------------------------
@@ -47,6 +52,6 @@ public class Matrix {
   //----------------------------------------------------------------------------
   public void flipMatrix()
   {
-    var = 0;
+
   }
 }
