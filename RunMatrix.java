@@ -5,7 +5,13 @@ public class RunMatrix {
 
     Matrix matrix = new Matrix();
 
-    matrix.initiateMatrix(5);
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Please enter the desired width of the matrix")
+
+    int matrixWidth = input.nextInt();
+
+    matrix.initiateMatrix(matrixWidth);
 
     matrix.populateMatrix();
 
