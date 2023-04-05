@@ -17,6 +17,7 @@ public class Matrix {
   //Declare an empty integer named matrixSize
   private int matrixSize;
 
+
   //----------------------------------------------------------------------------
   //  Constructor: Creates a matrix of a user-specified size full of 0s.
   //----------------------------------------------------------------------------
@@ -25,6 +26,7 @@ public class Matrix {
     matrixSize = value;
     matrix = new int[matrixSize][matrixSize];
   }
+
 
   //----------------------------------------------------------------------------
   //  Public method to fill the matrix with increasing integers.
@@ -41,6 +43,7 @@ public class Matrix {
     }
   }
 
+
   //----------------------------------------------------------------------------
   //  Public method to print the matrix with proper spacing in the console with
   //  the diagonal values highlighted in yellow.
@@ -48,21 +51,21 @@ public class Matrix {
   public void printMatrix()
   {
     //Return carriage for visual purposes
-    System.out.println("");
+    System.out.println();
 
     //Number of rows is equal to the user-entered matrixSize
     for(int row = 0; row < matrixSize; row++){
-      //Add a tab to each new row to indent entire matrix
+      //Add a tab to the start of each new row to indent entire matrix
       System.out.print("\t");
 
       //Number of columns is equal to the user-entered matrixSize
       for(int col = 0; col < matrixSize; col++){
         //The row and column of diagonal numbers add up to the size minus 1
-        if(row+col == matrixSize - 1){
+        if(row + col == matrixSize - 1){
           //Make any following text yellow
           System.out.print(ANSI_YELLOW);
         }
-        //Print number in the current cell with a width of 2 and 2 spaces after
+        //Print number in the current cell with a width of 4 and 1 space after
         System.out.printf("%4d ", matrix[row][col]);
         //Reset the text color back to the default white
         System.out.print(ANSI_RESET);
@@ -74,6 +77,7 @@ public class Matrix {
     //Return carriage after the matrix has fully printed
     System.out.println();
   }
+
 
   //----------------------------------------------------------------------------
   //  Public method to calculate the rows and columns of the two matrix cells
@@ -94,6 +98,7 @@ public class Matrix {
       }
     }
   }
+
 
   //----------------------------------------------------------------------------
   //  Private method which takes the x and y coordinates of the two cells to

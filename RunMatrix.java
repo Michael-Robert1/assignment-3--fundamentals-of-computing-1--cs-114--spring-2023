@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class RunMatrix {
   // ---------------------------------------------------------------------------
-  //  Construct, populate, and flip a matrix based on user-input
+  //  Construct a matrix based on user-input, populate it, and flip it.
   // ---------------------------------------------------------------------------
   public static void main(String[] args) {
 
